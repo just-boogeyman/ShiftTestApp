@@ -22,6 +22,11 @@ final class UserSessionManager {
 	var isUserRegistered: Bool {
 		UserDefaults.standard.string(forKey: "userName") != nil
 	}
+	
+	/// Возвращает имя пользователя при регистрации
+	var userName: String? {
+		UserDefaults.standard.string(forKey: "userName")
+	}
 
 	/// Сохраняет имя пользователя в `UserDefaults`.
 	///
